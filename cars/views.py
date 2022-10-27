@@ -35,6 +35,7 @@ def car_detail(request, id):
 
 
 def search(request):
+
     cars = Car.objects.order_by('-created_date')
 
     model_search = Car.objects.values_list('model', flat=True).distinct()

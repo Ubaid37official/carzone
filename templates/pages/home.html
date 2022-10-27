@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %} | Home {% endblock %}
+
 {% block content %}
 
 {% load humanize %}
@@ -145,30 +147,31 @@
                                     <div class="overlap-box">
                                         <div class="overlap-btns-area">
                                             <div class="car-magnify-gallery">
-                                                <a href="{{ car.car_photo.url }}" class="overlap-btn">
+                                                <a href="{{ cars.car_photo.url }}" class="overlap-btn">
                                                     <i class="fa fa-expand"></i>
-                                                    <img class="hidden" src="{{ car.car_photo.url }}">
+                                                    <img class="hidden" src="{{ cars.car_photo.url }}">
                                                 </a>
-                                                {% if car.car_photo_1.url %}
-                                                <a href="{{ car.car_photo_1.url }}" class="hidden">
+                                                {% if cars.car_photo_1 %}
+                                                <a href="{{ cars.car_photo_1.url }}" class="hidden" >
                                                     <img class="hidden" src="{{ car.car_photo_1.url }}">
                                                 </a>
                                                 {% endif %}
-                                                {% if car.car_photo_2.url %}
-                                                <a href="{{ car.car_photo_2.url }}" class="hidden">
-                                                    <img class="hidden" src="{{ car.car_photo_2.url }}">
+                                                  {% if cars.car_photo_2 %}
+                                                <a href="{{ cars.car_photo_2.url }}" class="hidden" >
+                                                    <img class="hidden" src="{{ cars.car_photo_2.url }}">
                                                 </a>
                                                 {% endif %}
-                                                {% if car.car_photo_3.url %}
-                                                <a href="{{ car.car_photo_3.url }}" class="hidden">
-                                                    <img class="hidden" src="{{ car.car_photo_3.url }}">
+                                                  {% if cars.car_photo_3 %}
+                                                <a href="{{ cars.car_photo_3.url }}" class="hidden" >
+                                                    <img class="hidden" src="{{ cars.car_photo_3.url }}">
                                                 </a>
                                                 {% endif %}
-                                                {% if car.car_photo_4.url %}
-                                                <a href="{{ car.car_photo_4.url }}" class="hidden">
-                                                    <img class="hidden" src="{{ car.car_photo_4.url }}">
+                                                  {% if cars.car_photo_4 %}
+                                                <a href="{{ cars.car_photo_4.url }}" class="hidden" >
+                                                    <img class="hidden" src="{{ cars.car_photo_4.url }}">
                                                 </a>
                                                 {% endif %}
+
 
                                             </div>
                                         </div>
